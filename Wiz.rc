@@ -1,0 +1,857 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resrc1.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+#include "password.h"
+#include "pattern.h"
+#include "rename.h"
+#include "replace.h"
+#include "sound.h"
+#include "wizver.h"
+#include "ver.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+SERVICEAPP DIALOG DISCARDABLE  1, 97, 219, 59
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Service App"
+BEGIN
+    CTEXT           "Processing file 1000 of 2500",IDC_PROGRESS_TEXT,8,8,204,
+                    8
+    CTEXT           "Processing file 1000 of 2500",IDC_PROGRESS_FILE_NAME,8,
+                    24,204,8
+    PUSHBUTTON      "Cancel",IDCANCEL,94,40,32,12
+END
+
+DIFFARCHIVES DIALOG DISCARDABLE  0, 0, 171, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find Differences in Archives"
+FONT 8, "Helv"
+BEGIN
+    PUSHBUTTON      "OK",IDOK,124,9,40,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,124,26,40,14,WS_GROUP
+    LTEXT           "Select two archives",-1,16,4,84,8,NOT WS_GROUP
+    LISTBOX         IDC_LISTBOX_DIFF,12,16,92,60,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+END
+
+UNZIP_PREFS DIALOG DISCARDABLE  4, 4, 279, 191
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Unzip Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "File Extraction",IDC_EXTRACTION_BOX,0,12,112,60,
+                    WS_GROUP
+    CONTROL         "Always Overwrite",IDC_OVERWRITE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,20,22,76,12
+    CONTROL         "Prompt to Overwrite",IDC_PROMPT_OVERWRITE,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,20,34,80,12
+    CONTROL         "Only if Newer",IDC_NEWER,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,20,47,68,12
+    GROUPBOX        "Listbox Selection",IDC_SELECTION_BOX,0,88,112,84,
+                    WS_GROUP
+    CONTROL         "Extracts",IDC_LBS_EXTRACT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,16,108,60,12
+    CONTROL         "Displays",IDC_LBS_DISPLAY,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,16,124,60,12
+    CONTROL         "Tests",IDC_LBS_TEST,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,16,140,60,12
+    GROUPBOX        "General",IDC_GENERAL_BOX,132,12,140,160,WS_GROUP
+    CHECKBOX        "Recreate Directories",IDC_RECREATE_DIR,148,20,84,12
+    CHECKBOX        "Convert LF -> CR/LF",IDC_LF_CRLF,148,40,80,12
+    CHECKBOX        "Space -> Underscore",IDC_SPACE_UNDERSCORE,148,60,92,12
+    CHECKBOX        "Restore Acl's",IDC_ACL,148,80,80,12
+    CHECKBOX        "Recurse On Searches",IDC_RECURSE_ON_SEARCH,148,100,112,
+                    12
+    CHECKBOX        "Scan for Archives when loading",IDC_RESCAN_FOR_ARCHIVES,
+                    148,120,120,12
+    CHECKBOX        "Use Privileges",IDC_PRIVILEGE,148,140,80,12
+    CHECKBOX        "Use File Open Dialogs",IDC_OLDSTYLE,148,158,90,12
+END
+
+ZIP_PREFS DIALOG DISCARDABLE  0, 0, 263, 178
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Zip Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CHECKBOX        "Freshen Changed Files",IDC_FRESHEN,4,4,88,12
+    CHECKBOX        "Update Changed Files",IDC_UPDATE,4,16,88,12
+    CHECKBOX        "Include System/Hidden Files",IDC_SYS_FILES,4,30,104,12
+    CHECKBOX        "Force MSDOS File Names",IDC_MSDOS,4,43,100,12
+    CHECKBOX        "Move Files into Archive",IDC_MOVE,4,56,92,12
+    CHECKBOX        "Zip File Time to latest file",IDC_FILETIME,4,69,92,12
+    CHECKBOX        "Convert LF -> CR/LF",IDC_LFCRLF,4,82,88,12
+    CHECKBOX        "Convert CR/LF -> LF",IDC_CRLFLF,4,95,88,12
+    CONTROL         "Add Comment",IDC_COMMENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,4,108,60,12
+    CONTROL         "Exclude Files Before Date",IDC_ZIP_EXCLUDE_DATE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,4,121,100,12
+    CONTROL         "Include Files Before Date",IDC_ZIP_INCLUDE_DATE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,4,132,100,12
+    CHECKBOX        "Save Acl's",IDC_PRIVILEGE,4,144,88,12
+    CHECKBOX        "Exclude Extra Attributes",IDC_ACL,4,156,88,12
+    CHECKBOX        "Temp Path",IDC_TEMPDIR,4,170,100,12
+    LTEXT           "",IDC_TEMPDIR_PATH,4,180,240,12,NOT WS_GROUP
+    CHECKBOX        "No Directory Entries",IDC_NO_DIR_ENTRY,112,4,88,12
+    CHECKBOX        "Ignore Directory Names",IDC_IGNORE_DIR,112,17,92,12
+    CHECKBOX        "Include Volume Label",IDC_VOL_LABEL,112,30,88,12
+    CHECKBOX        "Verbose Operation",IDC_VERBOSE,112,44,88,12
+    CHECKBOX        "Quiet Operation",IDC_QUIET,112,56,84,12
+    CONTROL         "Make 32 bit Self Extracting Archive",IDC_MAKE_W32_SFX,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,112,68,128,12
+    CONTROL         "Make DOS Self Extracting Archive",IDC_MAKE_DOS_SFX,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,112,80,128,12
+    CONTROL         "Adjust entries for SFX",IDC_OFFSETS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,112,92,88,12
+    CHECKBOX        "Repair Archive",IDC_REPAIR,112,104,88,12
+    CHECKBOX        "Repair Archive (desperate)",IDC_REPAIR_MORE,112,116,104,
+                    12
+    LTEXT           "Compression",-1,112,132,44,12,NOT WS_GROUP
+    CONTROL         "0",IDC_COMPRESSION_0,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,160,132,16,12
+    CONTROL         "1",IDC_COMPRESSION_1,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,176,132,16,12
+    CONTROL         "2",IDC_COMPRESSION_2,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,192,132,16,12
+    CONTROL         "3",IDC_COMPRESSION_3,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,208,132,16,12
+    CONTROL         "4",IDC_COMPRESSION_4,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,224,132,16,12
+    CONTROL         "5",IDC_COMPRESSION_5,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,160,144,16,12
+    CONTROL         "6",IDC_COMPRESSION_6,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,176,144,16,12
+    CONTROL         "7",IDC_COMPRESSION_7,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,192,144,16,12
+    CONTROL         "8",IDC_COMPRESSION_8,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,208,144,16,12
+    CONTROL         "9",IDC_COMPRESSION_9,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,224,144,16,12
+    CHECKBOX        "Encrypt",IDC_ENCRYPT,112,156,88,12
+END
+
+ABOUT DIALOGEX 16, 19, 159, 180
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+CAPTION "About Wiz"
+FONT 8, "Helv"
+BEGIN
+    CTEXT           "Info-ZIP's WIZ Version 4.0",IDM_ABOUT_VERSION_INFO,0,3,
+                    152,8,NOT WS_GROUP
+    CTEXT           "incorporating",-1,49,13,56,8,NOT WS_GROUP
+    CTEXT           "Info-ZIP's UnZip version 5.33 beta",IDM_ABOUT_ZIP_INFO,
+                    4,22,148,8,NOT WS_GROUP
+    CTEXT           "and",-1,63,33,28,8,NOT WS_GROUP
+    CTEXT           "Info-ZIP's Zip version 2.33 beta",IDM_ABOUT_UNZIP_INFO,
+                    4,41,148,8,NOT WS_GROUP
+    CTEXT           "Report bugs at: www.info-zip.org/zip-bug.html",-1,4,54,
+                    147,8
+    CONTROL         "InfoZip",-1,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    SS_SUNKEN | WS_BORDER,55,68,45,42
+    CTEXT           "Windows Interface and Libraries by:",-1,19,116,116,8,
+                    NOT WS_GROUP
+    CTEXT           "Mike White",-1,51,128,52,8
+    DEFPUSHBUTTON   "OK",IDOK,45,152,64,18,WS_GROUP,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+END
+
+PATTERN DIALOG DISCARDABLE  1, 97, 222, 67
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Files by Pattern"
+BEGIN
+    LTEXT           "Enter a pattern to select files. ",-1,8,8,212,8
+    LTEXT           "Some examples:  *.txt program?.exe chapter[1-9].doc",-1,
+                    8,20,176,8
+    EDITTEXT        IDC_FILE_PATTERN,8,34,172,12,ES_AUTOHSCROLL | 
+                    ES_OEMCONVERT
+    PUSHBUTTON      "&Select",IDOK,184,4,32,12,WS_DISABLED
+    PUSHBUTTON      "&Deselect",IDC_PATTERN_DESELECT,184,20,32,12,
+                    WS_DISABLED
+    PUSHBUTTON      "D&one",IDCANCEL,184,36,32,12
+    PUSHBUTTON      "&Help",IDC_PATTERN_HELP,184,52,32,12
+END
+
+SOUND DIALOG DISCARDABLE  1, 1, 179, 101
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sound Options"
+BEGIN
+    GROUPBOX        "Event and Sound Options",-1,4,4,172,42
+    CONTROL         "&No sound",IDM_SOUND_NONE,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE,8,16,50,10
+    CONTROL         "&Beep afterward",IDM_SOUND_BEEP,"Button",
+                    BS_AUTORADIOBUTTON | BS_PUSHLIKE,88,16,64,10
+    CONTROL         "Play sound &during",IDM_SOUND_WAVE_DURING,"Button",
+                    BS_AUTORADIOBUTTON | BS_PUSHLIKE | WS_DISABLED,8,32,70,
+                    10
+    CONTROL         "Play sound &afterward",IDM_SOUND_WAVE_AFTER,"Button",
+                    BS_AUTORADIOBUTTON | BS_PUSHLIKE | WS_DISABLED,88,32,80,
+                    10
+    LTEXT           "&Sound name or file:",IDM_SOUND_FILE_TEXT,8,52,132,8,
+                    WS_DISABLED
+    EDITTEXT        IDM_SOUND_EDIT,8,62,168,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "&Play",IDM_SOUND_PLAY,8,80,36,12,WS_DISABLED
+    PUSHBUTTON      "Browse sound &files...",IDM_SOUND_BROWSE,88,80,88,12,
+                    WS_DISABLED
+END
+
+GETFILES DIALOG DISCARDABLE  0, 0, 357, 186
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add File To Archive"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "File &Name:",1090,88,20,37,8,NOT WS_GROUP
+    EDITTEXT        1152,88,30,87,12,ES_AUTOHSCROLL | ES_OEMCONVERT | 
+                    ES_WANTRETURN | NOT WS_TABSTOP
+    LISTBOX         1120,88,47,88,108,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_HASSTRINGS | LBS_EXTENDEDSEL | LBS_DISABLENOSCROLL | 
+                    WS_VSCROLL
+    LTEXT           "D&irectories:",-1,8,8,48,9
+    LTEXT           "",1088,2,4,1,9,SS_NOPREFIX | NOT WS_VISIBLE | NOT 
+                    WS_GROUP
+    LISTBOX         1121,4,20,80,74,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "List Files of &Type:",1089,4,111,1,9,NOT WS_VISIBLE | 
+                    NOT WS_GROUP
+    COMBOBOX        1136,5,129,1,34,CBS_DROPDOWNLIST | CBS_NOINTEGRALHEIGHT | 
+                    NOT WS_VISIBLE | WS_BORDER
+    LTEXT           "Dri&ves:",1091,4,96,48,9
+    COMBOBOX        1137,4,108,80,79,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | WS_BORDER | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "O&K",IDC_DONE,312,9,40,14,WS_GROUP
+    PUSHBUTTON      "OK",IDOK,312,9,40,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,312,26,40,14,WS_GROUP
+    PUSHBUTTON      "&>> Add >>",IDC_ADD,180,65,40,14
+    PUSHBUTTON      "&<<Delete<<",IDC_DELETE,180,95,40,14
+    PUSHBUTTON      "&Help",1038,312,99,40,14,WS_GROUP
+    LISTBOX         IDC_FILE_LIST,224,9,80,137,LBS_MULTIPLESEL | 
+                    LBS_HASSTRINGS | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Select &All",IDC_SELECT_ALL,80,4,46,12
+    PUSHBUTTON      "&Deselect All",IDC_DESELECT_ALL,132,4,44,12
+    PUSHBUTTON      "Set R&ef",IDC_SET_ROOT,4,152,40,12
+    LTEXT           "Reference Directory:",-1,4,172,68,10,NOT WS_GROUP
+    PUSHBUTTON      "D&eselect Ref",IDC_FREE_ROOT,56,152,52,12
+    LTEXT           "",IDC_ROOT_DIR,80,172,268,8,NOT WS_GROUP
+    PUSHBUTTON      "&Options",IDC_TEMP_PREFERENCES,312,43,40,14
+    PUSHBUTTON      "&Recurse",IDC_RECURSE,312,60,40,14
+    PUSHBUTTON      "&Include",IDC_INCLUDE,312,78,40,14
+    EDITTEXT        IDC_RECURSE_EDITBOX,224,152,80,12
+    LTEXT           "Recurse/Include pattern:",-1,132,152,84,12,NOT WS_GROUP
+END
+
+GETDATE DIALOG DISCARDABLE  0, 1, 225, 53
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Enter Date"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,188,3,32,13,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,188,23,32,13,WS_GROUP
+    COMBOBOX        IDC_DAY,68,24,50,52,CBS_DROPDOWNLIST | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_YEAR,132,24,50,52,CBS_DROPDOWNLIST | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MONTH,4,24,48,52,CBS_DROPDOWNLIST | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Month",-1,12,16,32,8,NOT WS_GROUP
+    CTEXT           "Day",-1,72,16,36,8,NOT WS_GROUP
+    CTEXT           "Year",-1,136,16,36,8,NOT WS_GROUP
+    PUSHBUTTON      "<<",IDC_DOWN,44,4,28,8
+    PUSHBUTTON      ">>",IDC_UP,108,4,28,8
+END
+
+RENAME DIALOG DISCARDABLE  1, 97, 139, 60
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rename File"
+BEGIN
+    LTEXT           "",IDM_RENAME_TEXT,4,4,88,10,NOT WS_GROUP
+    LTEXT           "to",IDM_TO_TEXT,44,19,11,10
+    EDITTEXT        IDM_NEW_NAME_TEXT,4,32,88,10,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_OEMCONVERT
+    DEFPUSHBUTTON   "&Rename",IDM_RENAME_RENAME,100,4,32,12
+    PUSHBUTTON      "&Cancel",IDM_RENAME_CANCEL,100,20,32,12
+    PUSHBUTTON      "&Help",IDM_RENAME_HELP,100,36,32,12
+END
+
+REPLACE DIALOG DISCARDABLE  1, 1, 156, 63
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Target File Exists"
+BEGIN
+    PUSHBUTTON      "&Skip",IDM_REPLACE_NO,4,48,44,12
+    PUSHBUTTON      "Re&place",IDM_REPLACE_YES,4,32,44,12
+    PUSHBUTTON      "Replace &All",IDM_REPLACE_ALL,56,32,44,12
+    PUSHBUTTON      "Skip A&ll",IDM_REPLACE_NONE,56,48,44,12
+    PUSHBUTTON      "&Rename",IDM_REPLACE_RENAME,108,32,44,12
+    PUSHBUTTON      "&Help",IDM_REPLACE_HELP,108,48,44,12
+    EDITTEXT        IDM_REPLACE_TEXT,4,8,148,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+PASSWORD DIALOG DISCARDABLE  1, 97, 155, 56
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Encrypted File"
+BEGIN
+    LTEXT           "",IDC_PASSWORD_TEXT,4,36,104,10
+    EDITTEXT        IDC_NEW_PASSWORD_NAME_TEXT,4,20,104,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Enter",IDC_PASSWORD_RENAME,120,4,28,12
+    PUSHBUTTON      "&Cancel",IDC_PASSWORD_CANCEL,120,20,28,12
+    LTEXT           "",IDC_PASSWORD_INCORRECT,4,4,104,10
+END
+
+COMMENTBOX DIALOG DISCARDABLE  0, 0, 362, 207
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Enter Archive Comment"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "OK",IDOK,288,10,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,288,30,50,14
+    PUSHBUTTON      "Help",ID_HELP,288,50,50,14
+    EDITTEXT        IDM_EDIT_BOX,8,9,264,190,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+END
+
+GREPPATTERN DIALOG DISCARDABLE  1, 97, 242, 115
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Find Files Containing A Pattern"
+BEGIN
+    LTEXT           "Enter a file pattern to look in. ",
+                    IDC_FILE_PATTERN_TEXT,8,72,100,8
+    LTEXT           "Enter a pattern to search for. ",-1,8,20,100,8
+    LTEXT           "Examples:  *.txt program?.exe chapter[1-9].doc",
+                    IDC_FILE_PATTERN_EXAM,8,84,160,8
+    LTEXT           "Example:  My Document Text",-1,8,32,104,8
+    EDITTEXT        IDC_GREP_PATTERN,8,52,172,12,ES_AUTOHSCROLL | 
+                    ES_OEMCONVERT
+    EDITTEXT        IDC_FILE_PATTERN,8,96,172,12,ES_AUTOHSCROLL | 
+                    ES_OEMCONVERT
+    PUSHBUTTON      "Search",IDOK,204,52,32,12,WS_DISABLED
+    PUSHBUTTON      "Deselect",IDC_PATTERN_DESELECT,204,96,32,12,WS_DISABLED
+    PUSHBUTTON      "Done",IDCANCEL,204,72,32,12
+    CONTROL         "Case Sensitive Greps",IDC_CASE_SENSITIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,8,84,12
+    CONTROL         "Whole Words Only",IDC_WHOLEWORDS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,20,76,12
+    CONTROL         "Ignore Binary Files",IDC_IGNORE_BINARY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,32,76,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CHILDICON           ICON    DISCARDABLE     "ICONS/child.ico"
+ADUMMYICON              ICON    DISCARDABLE     "ICONS/AWiz.ico"
+WIZICON                 ICON    DISCARDABLE     "ICONS/A.ico"
+ZIPPED                  ICON    DISCARDABLE     "ICONS/zipped.ico"
+UNZIPPED                ICON    DISCARDABLE     "ICONS/unzipped.ico"
+SIGNAL                  ICON    DISCARDABLE     "ICONS/sounder.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+INFOZIP                 BITMAP  MOVEABLE PURE   "BITMAPS/info-zip.bmp"
+SPLASH                  BITMAP  MOVEABLE PURE   "BITMAPS/splash.bmp"
+IDB_BMP                 BITMAP  MOVEABLE PURE   "BITMAPS/toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+HELPCURSOR              CURSOR  DISCARDABLE     "ICONS\\help.cur"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", "Info-Zip\0"
+            VALUE "FileDescription", "Info-Zip's Windows Un/Zipper\0"
+            VALUE "FileVersion", "5.03.00\0"
+            VALUE "InternalName", "Windows Info-Zip\0"
+            VALUE "LegalCopyright", "Info-Zip 1996\0"
+            VALUE "OriginalFilename", "WIZ.EXE\0"
+            VALUE "ProductName", "Windows Info-Zip\0"
+            VALUE "ProductVersion", "5.03.00\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+WIZ MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Create/Update Zip Archive...\tAlt+N", IDM_ZIP_TARGET
+        MENUITEM "&Add to current Zip Archive...", IDM_ZIP_TARGET_CURRENT
+        MENUITEM SEPARATOR
+        MENUITEM "&Open Archive...\tAlt+O",     IDM_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Unzip Archive To...\tAlt+C", IDM_CHDIR
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete Archive...",          IDM_DELETE_ARCHIVE
+        MENUITEM "&Copy Archive...",            IDM_COPY_ARCHIVE
+        MENUITEM SEPARATOR
+        MENUITEM "Explorer...",                 IDM_EXPLORER
+        MENUITEM "WizDiff...",                  IDM_WIZDIFF
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+X",                IDM_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Notify when clearing messages", IDM_NOTIFY_CLEARING
+        MENUITEM "Use external editor for RTF files", IDM_EXTERNAL_RTF
+    END
+    POPUP "&Archives"
+    BEGIN
+        MENUITEM "&Select All Files\tAlt+A",    IDM_SELECT_ALL
+        MENUITEM "&Deselect All Files",         IDM_DESELECT_ALL
+        MENUITEM "Select Files by &Pattern...", IDM_SELECT_BY_PATTERN
+        MENUITEM SEPARATOR
+        MENUITEM "Delete &Entries in Archive",  IDM_ZIP_DELETE_ENTRIES
+        , GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Update Archive Entries\tAlt+U", IDM_UPDATE_ZIP, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xtract\tAlt+E",             IDM_EXTRACT, GRAYED
+        MENUITEM "D&isplay\tAlt+D",             IDM_DISPLAY, GRAYED
+        MENUITEM "&Test\tAlt+T",                IDM_TEST, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Complete &Archive Infomation", IDM_GET_ZIPINFO, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Show .Zip &Comment",          IDM_SHOW_COMMENT, GRAYED
+        MENUITEM "Grep Archive Contents",       IDM_GREP_ARCHIVE_CONTENTS
+        MENUITEM "Find Difference between Archives", IDM_DIFF_ARCHIVE
+        MENUITEM "Display Archive Differences...", IDM_DIFF_ARCHIVE_CONTENTS
+    END
+    POPUP "&Search"
+    BEGIN
+        MENUITEM "Search Archives...",          IDM_SEARCH_ARCHIVE
+        MENUITEM "Scan for Archives...",        IDM_SCAN_ARCHIVE
+        MENUITEM "Search (Grep) Archives for Pattern...", IDM_GREP_ARCHIVE
+    END
+    POPUP "O&ptions"
+    BEGIN
+        MENUITEM "&Wiz's Options...",           IDM_PREFERENCES
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Clear Message Window",       IDM_CLEAR_STATUS
+        MENUITEM "Clear Scan for Archive Window", IDM_CLEAR_ARCHIVEBOX
+        MENUITEM "Clear Search Archive Window", IDM_CLEAR_GREPBOX
+        MENUITEM SEPARATOR
+        MENUITEM "Tile &Horizontal",            IDM_WINDOWTILEHORIZONTAL
+        MENUITEM "Tile &Vertical",              IDM_WINDOWTILEVERTICAL
+        MENUITEM "&Cascade",                    IDM_WINDOWCASCADE
+        MENUITEM "Arrange &Icons",              IDM_WINDOWICONS
+        MENUITEM "Close &All",                  IDM_WINDOWCLOSEALL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Wiz &Help",                   IDM_HELP
+        MENUITEM "Using &Windows Help",         IDM_HELP_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "&About Wiz...",               IDM_ABOUT
+    END
+END
+
+ARCHIVEMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "Tile &Horizontal",            IDM_WINDOWTILEHORIZONTAL
+        MENUITEM "Tile &Vertical",              IDM_WINDOWTILEVERTICAL
+        MENUITEM "&Cascade",                    IDM_WINDOWCASCADE
+        MENUITEM "Arrange &Icons",              IDM_WINDOWICONS
+        MENUITEM "Close &All",                  IDM_WINDOWCLOSEALL
+    END
+END
+
+POPUPLISTMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Dummy Popup"
+    BEGIN
+        MENUITEM "Select All Files",            IDM_SELECT_ALL
+        MENUITEM "Deselect All Files",          IDM_DESELECT_ALL
+        MENUITEM "Select Files by Pattern...",  IDM_SELECT_BY_PATTERN
+        MENUITEM SEPARATOR
+        MENUITEM "Delete Entries in Archive",   IDM_ZIP_DELETE_ENTRIES
+        , GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Update Archive Entries",      IDM_UPDATE_ZIP, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Extract",                     IDM_EXTRACT, GRAYED
+        MENUITEM "Display",                     IDM_DISPLAY, GRAYED
+        MENUITEM "Test",                        IDM_TEST, GRAYED
+        MENUITEM "Complete Archive Info",       IDM_GET_ZIPINFO, GRAYED
+        MENUITEM "Show .Zip &Comment",          IDM_SHOW_COMMENT, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Delete Archive...",           IDM_DELETE_ARCHIVE
+        MENUITEM "Copy Archive...",             IDM_COPY_ARCHIVE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+WIZACCELS ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "A",            IDM_SELECT_ALL,         VIRTKEY, ALT
+    "C",            IDM_CHDIR,              VIRTKEY, ALT
+    "D",            IDM_DISPLAY,            VIRTKEY, ALT
+    "E",            IDM_EXTRACT,            VIRTKEY, ALT
+    "N",            IDM_ZIP_TARGET,         VIRTKEY, ALT
+    "N",            IDM_TOGGLE_TABS,        VIRTKEY, CONTROL
+    "O",            IDM_OPEN,               VIRTKEY, ALT
+    "T",            IDM_TEST,               VIRTKEY, ALT
+    "U",            IDM_UPDATE_ZIP,         VIRTKEY, ALT
+    "X",            IDM_EXIT,               VIRTKEY, ALT
+    VK_ESCAPE,      IDM_ESCAPE,             VIRTKEY 
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resrc1.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "#include ""password.h""\r\n"
+    "#include ""pattern.h""\r\n"
+    "#include ""rename.h""\r\n"
+    "#include ""replace.h""\r\n"
+    "#include ""sound.h""\r\n"
+    "#include ""wizver.h""\r\n"
+    "#include ""ver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ARCHIVE             "Archive Contents"
+    IDS_EDITOR              "Display/Editor"
+    IDS_SCAN                "Scan For Archives"
+    IDS_SEARCH              "Search In Archives"
+    IDS_MESSAGES            "Messages"
+    IDS_ARCHIVE_TIP         "Show Display Archive Window"
+    IDS_EDITOR_TIP          "Show Wiz Editor/Display Window"
+    IDS_SCAN_TIP            "Show Scan for Archive Window"
+    IDS_SEARCH_TIP          "Show Search Archive Window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MESSAGES_TIP        "Show Wiz Message Window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DESCRIPTION         "Wiz"
+    IDS_CHILDNAME           "MdiChild"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CLEARBUFFER         "Clearing Status window to make room for more information."
+    IDS_NO_MATCH            "No entry matches the pattern!"
+    IDS_INTERNAL_COPY_ERROR "Internal error: Cannot copy file. Common dialog error code is 0x%lX."
+    IDS_NO_MEMORY           "Insufficient memory or resources"
+    IDS_CHG_DIR_ERROR       "Can't change directory to %s!"
+    IDS_MAKE_ZIP_ERROR      "Internal error: Cannot make zip file. Common dialog error code is 0x%lX."
+    IDS_ERROR               "Error"
+    IDS_ERROR_TAB_CTRL      "Unable to create tab control, closing window"
+    IDS_CANT_OPEN           "Can't open %s"
+    IDS_HELP_EXAMPLE        "Help Example"
+    IDS_NO_EXPLORER         "Windows Explorer not found"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_REPLACE             "Replace"
+    IDS_FOUND_MATCH_STR     "Found match: %s\n"
+    IDS_NOTE                "Note"
+    IDS_CONFIRM_DELETE      "Are you sure you want to delete\n%s"
+    IDS_NO_WIZDIFF          "WizDiff not found"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FILE_NOT_FOUND      "File not found"
+    IDS_PATH_NOT_FOUND      "Path not found"
+    IDS_BAD_FORMAT          "Bad executable"
+    IDS_SHARING_VIOLATION   "Sharing violation"
+    IDS_UNDETERMINED_ERROR  "Undetermined error"
+    IDS_EXECUTION_ERROR     "Execution error"
+    IDS_DELETE_TITLE        "Deleting Archive"
+    IDS_DELETE_MESSAGE      "%s deleted\n"
+    IDS_ABOUT               "About"
+    IDS_SOUND               "Sound"
+    IDS_FILESPEC            "File Spec"
+    IDS_NAME                "Name"
+    IDS_ORIG_SIZE           "Orig Size"
+    IDS_COMP_SIZE           "Comp Size"
+    IDS_RATIO               "Ratio"
+    IDS_DATE                "Date"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TIME                "Time"
+    IDS_CRYPT               "Encrypted"
+    IDS_ARCHIVE_NAME        "Archive"
+    IDS_FIND_FILES          "Find Files in Archive"
+    IDS_UNZIP_TO            "Unzip to"
+    IDS_SEARCH_NAME         "Search"
+    IDS_SEARCH_FOR          "Searching %s for %s\n"
+    IDS_CRLF_WARNING        "This option can cause corruption of files other than ""text files. This is particularly true of executables, word processing ""documents, or database files. The only safe file is an ASCII text ""file. Press OK to confirm or else CANCEL."
+    IDS_CRLF_TITLE          "Warning About Conversions"
+    IDS_SELECT              "Select"
+    IDS_PASSWORD_NAME       "Password"
+    IDS_RENAME_STR          "Rename %s"
+    IDS_RENAME_NAME         "Rename"
+    IDS_LOADLIBRARY         "DLL failed to load. Error Code %ld"
+    IDS_NO_LOAD             "Could not load %s"
+    IDS_NO_INIT             "Cannot initialize dll. Terminating."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SYSMENU             "Move, size, or close application window"
+    IDS_MDISYSMENU          "Move, size, or close document window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCRESTORE           "Restores the window to normal size"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCMOVE              "Changes the position of the window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCSIZE              "Changes the size of the window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCMINIMIZE          "Minimizes the window to an icon"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCMAXIMIZE          "Enlarges the window to full size"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCCLOSE             "Closes the window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCTASKLIST          "Switches to another application through the Windows Task Manager"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCNEXTWINDOW        "Switches to the next document window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCPREVWINDOW        "Switches to the previous document window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FILEMENU            "Create, open, and delete archives"
+    IDM_ZIP_TARGET          "Creates or updates an archive"
+    IDM_ZIP_TARGET_CURRENT  "Add files to currently selected zip archive"
+    IDM_OPEN                "Opens an existing archive"
+    IDM_CHDIR               "Select the directory to extract to"
+    IDM_COPY_ARCHIVE        "Copy the active archive"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_DELETE_ARCHIVE      "Delete the active archive"
+    IDM_EXPLORER            "Launch Explorer"
+    IDM_WIZDIFF             "Launch WizDiff"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_EXIT                "Quits Wiz"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDITMENU            "Clear message window"
+    IDM_CLEAR_STATUS        "Clear message window"
+    IDM_NOTIFY_CLEARING     "Notify if message buffer becomes full"
+    IDM_EXTERNAL_RTF        "Use external editor for RTF files"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SEARCHMENU          "Look for archive, search archives"
+    IDM_SEARCH_ARCHIVE      "Look in archives for files of a given pattern"
+    IDM_SCAN_ARCHIVE        "Look for archives and self-extracting executables"
+    IDM_GREP_ARCHIVE        "Search (Grep) Archives for a given pattern"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HELPMENU            "Get help"
+    IDM_HELP                "Get help for Wiz"
+    IDM_HELP_HELP           "Learn about using Windows Help"
+    IDM_ABOUT               "Displays information about Wiz"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ARCHIVEMENU         "Manipulate Archives"
+    IDM_SELECT_ALL          "Select all entries in the archive"
+    IDM_DESELECT_ALL        "Unselect all entries in the archive"
+    IDM_SELECT_BY_PATTERN   "Select archive entries by pattern"
+    IDM_ZIP_DELETE_ENTRIES  "Delete selected archive entries"
+    IDM_UPDATE_ZIP          "Update selected archive entries"
+    IDM_EXTRACT             "Extract selected archive entries"
+    IDM_DISPLAY             "Display selected archive entry"
+    IDM_TEST                "Test selected archive entries"
+    IDM_GET_ZIPINFO         "Display full archive information for selected entries"
+    IDM_SHOW_COMMENT        "Display archive comment"
+    IDM_DIFF_ARCHIVE        "Show differences between archives"
+    IDM_GREP_ARCHIVE_CONTENTS "Search Current Archive for pattern"
+    IDM_DIFF_ARCHIVE_CONTENTS "Display Archives Differences"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_OPTIONSMENU         "Set Wiz options"
+    IDM_PREFERENCES         "Set Wiz Options"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WINDOWMENU          "Rearrange windows or activate specified window"
+    IDM_CLEAR_ARCHIVEBOX    "Clear search for archives window"
+    IDM_CLEAR_GREPBOX       "Clear search archives window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_WINDOWTILEHORIZONTAL 
+                            "Arranges windows as non-overlapping horizontal tiles"
+    IDM_WINDOWTILEVERTICAL  "Arranges windows as non-overlapping vertical tiles"
+    IDM_WINDOWCASCADE       "Arranges windows as overlapping tiles"
+    IDM_WINDOWCLOSEALL      "Closes all open windows"
+    IDM_WINDOWICONS         "Arranges minimized window icons"
+    IDM_WINDOWCHILD         "Switches to "
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

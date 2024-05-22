@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[Wiz.dsp]
+SCC_Aux_Path = "C:\SourceSafe"
+SCC_Project_Name = "$/Wiz 6.0/WIZ/VisualC/Wiz_and_Static_Libraries", YLBAAAAA
+
+[wiz.dsw]
+SCC_Aux_Path = "C:\SourceSafe"
+SCC_Project_Name = "$/Wiz 6.0/WIZ/VisualC/Wiz_and_Static_Libraries", YLBAAAAA

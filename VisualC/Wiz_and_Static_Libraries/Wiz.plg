@@ -1,0 +1,1453 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: UNZIPSFX - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/windll.res" /i "\Wiz\unzip\windll" /d "NDEBUG" "C:\Wiz\unzip\windll\windll.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPD7.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "c:\Wiz\unzip" /D "NDEBUG" /D "_MBCS" /D "_LIB" /D "API" /D "SFX" /D "USE_EF_UT_TIME" /D "REENTRANT" /D "WINDLL" /D "DLL" /D "USE_UNZIP_LIB" /D "ZIP64_SUPPORT" /D "WIN32" /D "LARGE_FILE_SUPPORT" /Fp"Release/UNZIPSFX.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Wiz\unzip\api.c"
+"C:\Wiz\unzip\crc32.c"
+"C:\Wiz\unzip\crctab.c"
+"C:\Wiz\unzip\crypt.c"
+"C:\Wiz\unzip\explode.c"
+"C:\Wiz\unzip\extract.c"
+"C:\Wiz\unzip\fileio.c"
+"C:\Wiz\unzip\globals.c"
+"C:\Wiz\unzip\inflate.c"
+"C:\Wiz\unzip\match.c"
+"C:\Wiz\unzip\Win32\nt.c"
+"C:\Wiz\unzip\process.c"
+"C:\Wiz\unzip\Win32\win32.c"
+"C:\Wiz\unzip\windll\windll.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPD7.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPD8.tmp" with contents
+[
+/nologo /out:"..\Release\UNZIPSFX.lib" 
+.\Release\api.obj
+.\Release\crc32.obj
+.\Release\crctab.obj
+.\Release\crypt.obj
+.\Release\explode.obj
+.\Release\extract.obj
+.\Release\fileio.obj
+.\Release\globals.obj
+.\Release\inflate.obj
+.\Release\match.obj
+.\Release\nt.obj
+.\Release\process.obj
+.\Release\win32.obj
+.\Release\windll.obj
+.\Release\windll.res
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPD8.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+api.c
+crc32.c
+crctab.c
+crypt.c
+explode.c
+extract.c
+fileio.c
+globals.c
+inflate.c
+match.c
+nt.c
+process.c
+win32.c
+windll.c
+Creating library...
+
+
+
+<h3>Results</h3>
+UNZIPSFX.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: UNZIPSFX - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/windll.res" /i "\Wiz\unzip\windll" /d "_DEBUG" "C:\Wiz\unzip\windll\windll.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPD9.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "c:\Wiz\unzip" /D "_DEBUG" /D "_MBCS" /D "_LIB" /D "API" /D "SFX" /D "USE_EF_UT_TIME" /D "REENTRANT" /D "WINDLL" /D "DLL" /D "USE_UNZIP_LIB" /D "ZIP64_SUPPORT" /D "WIN32" /D "LARGE_FILE_SUPPORT" /Fp"Debug/UNZIPSFX.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Wiz\unzip\api.c"
+"C:\Wiz\unzip\crc32.c"
+"C:\Wiz\unzip\crctab.c"
+"C:\Wiz\unzip\crypt.c"
+"C:\Wiz\unzip\explode.c"
+"C:\Wiz\unzip\extract.c"
+"C:\Wiz\unzip\fileio.c"
+"C:\Wiz\unzip\globals.c"
+"C:\Wiz\unzip\inflate.c"
+"C:\Wiz\unzip\match.c"
+"C:\Wiz\unzip\Win32\nt.c"
+"C:\Wiz\unzip\process.c"
+"C:\Wiz\unzip\Win32\win32.c"
+"C:\Wiz\unzip\windll\windll.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPD9.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPDA.tmp" with contents
+[
+/nologo /out:"..\Debug\UNZIPSFX.lib" 
+.\Debug\api.obj
+.\Debug\crc32.obj
+.\Debug\crctab.obj
+.\Debug\crypt.obj
+.\Debug\explode.obj
+.\Debug\extract.obj
+.\Debug\fileio.obj
+.\Debug\globals.obj
+.\Debug\inflate.obj
+.\Debug\match.obj
+.\Debug\nt.obj
+.\Debug\process.obj
+.\Debug\win32.obj
+.\Debug\windll.obj
+.\Debug\windll.res
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPDA.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+api.c
+crc32.c
+crctab.c
+crypt.c
+explode.c
+extract.c
+fileio.c
+globals.c
+inflate.c
+match.c
+nt.c
+process.c
+win32.c
+windll.c
+Creating library...
+
+
+
+<h3>Results</h3>
+UNZIPSFX.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Unzip32 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPDB.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "WINDLL" /D "UNZIPLIB" /D "USE_EF_UT_TIME" /D "DLL" /D "REENTRANT" /D "LZW_CLEAN" /Fp"Release/Unzip32.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Wiz\unzip\api.c"
+"C:\Wiz\unzip\crc32.c"
+"C:\Wiz\unzip\crctab.c"
+"C:\Wiz\unzip\crypt.c"
+"C:\Wiz\unzip\explode.c"
+"C:\Wiz\unzip\extract.c"
+"C:\Wiz\unzip\fileio.c"
+"C:\Wiz\unzip\globals.c"
+"C:\Wiz\unzip\inflate.c"
+"C:\Wiz\unzip\list.c"
+"C:\Wiz\unzip\match.c"
+"C:\Wiz\unzip\Win32\nt.c"
+"C:\Wiz\unzip\process.c"
+"C:\Wiz\unzip\unshrink.c"
+"C:\Wiz\unzip\Win32\win32.c"
+"C:\Wiz\unzip\windll\windll.c"
+"C:\Wiz\unzip\zipinfo.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPDB.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPDC.tmp" with contents
+[
+/nologo /out:"Release\Unzip32.lib" 
+.\Release\api.obj
+.\Release\crc32.obj
+.\Release\crctab.obj
+.\Release\crypt.obj
+.\Release\explode.obj
+.\Release\extract.obj
+.\Release\fileio.obj
+.\Release\globals.obj
+.\Release\inflate.obj
+.\Release\list.obj
+.\Release\match.obj
+.\Release\nt.obj
+.\Release\process.obj
+.\Release\unshrink.obj
+.\Release\win32.obj
+.\Release\windll.obj
+.\Release\zipinfo.obj
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPDC.tmp"
+<h3>Output Window</h3>
+Compiling...
+api.c
+crc32.c
+crctab.c
+crypt.c
+explode.c
+extract.c
+fileio.c
+globals.c
+inflate.c
+list.c
+match.c
+nt.c
+process.c
+unshrink.c
+win32.c
+windll.c
+zipinfo.c
+Creating library...
+
+
+
+<h3>Results</h3>
+Unzip32.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Unzip32 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPDD.tmp" with contents
+[
+/nologo /MLd /W3 /GX /Z7 /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "WINDLL" /D "UNZIPLIB" /D "USE_EF_UT_TIME" /D "DLL" /D "REENTRANT" /D "LZW_CLEAN" /Fp"Debug/Unzip32.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Wiz\unzip\api.c"
+"C:\Wiz\unzip\crc32.c"
+"C:\Wiz\unzip\crctab.c"
+"C:\Wiz\unzip\crypt.c"
+"C:\Wiz\unzip\explode.c"
+"C:\Wiz\unzip\extract.c"
+"C:\Wiz\unzip\fileio.c"
+"C:\Wiz\unzip\globals.c"
+"C:\Wiz\unzip\inflate.c"
+"C:\Wiz\unzip\list.c"
+"C:\Wiz\unzip\match.c"
+"C:\Wiz\unzip\Win32\nt.c"
+"C:\Wiz\unzip\process.c"
+"C:\Wiz\unzip\unshrink.c"
+"C:\Wiz\unzip\Win32\win32.c"
+"C:\Wiz\unzip\windll\windll.c"
+"C:\Wiz\unzip\zipinfo.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPDD.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPDE.tmp" with contents
+[
+/nologo /out:"Debug\Unzip32.lib" 
+.\Debug\api.obj
+.\Debug\crc32.obj
+.\Debug\crctab.obj
+.\Debug\crypt.obj
+.\Debug\explode.obj
+.\Debug\extract.obj
+.\Debug\fileio.obj
+.\Debug\globals.obj
+.\Debug\inflate.obj
+.\Debug\list.obj
+.\Debug\match.obj
+.\Debug\nt.obj
+.\Debug\process.obj
+.\Debug\unshrink.obj
+.\Debug\win32.obj
+.\Debug\windll.obj
+.\Debug\zipinfo.obj
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPDE.tmp"
+<h3>Output Window</h3>
+Compiling...
+api.c
+crc32.c
+crctab.c
+crypt.c
+explode.c
+extract.c
+fileio.c
+globals.c
+inflate.c
+list.c
+match.c
+nt.c
+process.c
+unshrink.c
+win32.c
+windll.c
+zipinfo.c
+Creating library...
+
+
+
+<h3>Results</h3>
+Unzip32.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Unzip32 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPDF.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "WINDLL" /D "UNZIPLIB" /D "USE_EF_UT_TIME" /D "DLL" /D "REENTRANT" /D "LZW_CLEAN" /Fp"Release/Unzip32.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Wiz\unzip\api.c"
+"C:\Wiz\unzip\crc32.c"
+"C:\Wiz\unzip\crctab.c"
+"C:\Wiz\unzip\crypt.c"
+"C:\Wiz\unzip\explode.c"
+"C:\Wiz\unzip\extract.c"
+"C:\Wiz\unzip\fileio.c"
+"C:\Wiz\unzip\globals.c"
+"C:\Wiz\unzip\inflate.c"
+"C:\Wiz\unzip\list.c"
+"C:\Wiz\unzip\match.c"
+"C:\Wiz\unzip\Win32\nt.c"
+"C:\Wiz\unzip\process.c"
+"C:\Wiz\unzip\unshrink.c"
+"C:\Wiz\unzip\Win32\win32.c"
+"C:\Wiz\unzip\windll\windll.c"
+"C:\Wiz\unzip\zipinfo.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPDF.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE0.tmp" with contents
+[
+/nologo /out:"Release\Unzip32.lib" 
+.\Release\api.obj
+.\Release\crc32.obj
+.\Release\crctab.obj
+.\Release\crypt.obj
+.\Release\explode.obj
+.\Release\extract.obj
+.\Release\fileio.obj
+.\Release\globals.obj
+.\Release\inflate.obj
+.\Release\list.obj
+.\Release\match.obj
+.\Release\nt.obj
+.\Release\process.obj
+.\Release\unshrink.obj
+.\Release\win32.obj
+.\Release\windll.obj
+.\Release\zipinfo.obj
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE0.tmp"
+<h3>Output Window</h3>
+Compiling...
+api.c
+crc32.c
+crctab.c
+crypt.c
+explode.c
+extract.c
+fileio.c
+globals.c
+inflate.c
+list.c
+match.c
+nt.c
+process.c
+unshrink.c
+win32.c
+windll.c
+zipinfo.c
+Creating library...
+<h3>
+--------------------Configuration: Zip32 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/windll.res" /i "\Wiz\zip\windll" "C:\Wiz\zip\windll\windll.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE1.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "USE_EF_UT_TIME" /D "NO_ASM" /D "ZIPLIB" /D "WINDLL" /D "API" /Fp"Release/Zip32.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Wiz\zip\api.c"
+"C:\Wiz\zip\crc32.c"
+"C:\Wiz\zip\crctab.c"
+"C:\Wiz\zip\crypt.c"
+"C:\Wiz\zip\deflate.c"
+"C:\Wiz\zip\fileio.c"
+"C:\Wiz\zip\globals.c"
+"C:\Wiz\zip\Win32\nt.c"
+"C:\Wiz\zip\trees.c"
+"C:\Wiz\zip\util.c"
+"C:\Wiz\zip\Win32\win32.c"
+"C:\Wiz\zip\Win32\win32zip.c"
+"C:\Wiz\zip\windll\windll.c"
+"C:\Wiz\zip\zip.c"
+"C:\Wiz\zip\zipfile.c"
+"C:\Wiz\zip\zipup.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE1.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE2.tmp" with contents
+[
+/nologo /out:"Release\Zip32.lib" 
+.\Release\api.obj
+.\Release\crc32.obj
+.\Release\crctab.obj
+.\Release\crypt.obj
+.\Release\deflate.obj
+.\Release\fileio.obj
+.\Release\globals.obj
+.\Release\nt.obj
+.\Release\trees.obj
+.\Release\util.obj
+.\Release\win32.obj
+.\Release\win32zip.obj
+.\Release\windll.obj
+.\Release\zip.obj
+.\Release\zipfile.obj
+.\Release\zipup.obj
+.\Release\windll.res
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE2.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+api.c
+crc32.c
+crctab.c
+crypt.c
+deflate.c
+fileio.c
+globals.c
+nt.c
+trees.c
+util.c
+win32.c
+win32zip.c
+windll.c
+zip.c
+zipfile.c
+zipup.c
+Creating library...
+<h3>
+--------------------Configuration: Wiz - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/wiz.res" /i "\Wiz" /d "NDEBUG" "C:\Wiz\wiz.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE3.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "USE_UNZIP_LIB" /D "USE_ZIP_LIB" /D "API" /Fp"Release/Wiz.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Wiz\about.c"
+"C:\Wiz\action.c"
+"C:\Wiz\cmds.c"
+"C:\Wiz\comment.c"
+"C:\Wiz\copyfile.c"
+"C:\Wiz\diff.c"
+"C:\Wiz\dispatch.c"
+"C:\Wiz\display.c"
+"C:\Wiz\filefind.c"
+"C:\Wiz\getdate.c"
+"C:\Wiz\getdir.c"
+"C:\Wiz\getfiles.c"
+"C:\Wiz\grep.c"
+"C:\Wiz\makezip.c"
+"C:\Wiz\mdichild.c"
+"C:\Wiz\misc.c"
+"C:\Wiz\password.c"
+"C:\Wiz\pattern.c"
+"C:\Wiz\property.c"
+"C:\Wiz\registry.c"
+"C:\Wiz\rename.c"
+"C:\Wiz\replace.c"
+"C:\Wiz\seldir.c"
+"C:\Wiz\service.c"
+"C:\Wiz\sizewndw.c"
+"C:\Wiz\sound.c"
+"C:\Wiz\splash.c"
+"C:\Wiz\statbar.c"
+"C:\Wiz\strings.c"
+"C:\Wiz\tabctrl.c"
+"C:\Wiz\toolbar.c"
+"C:\Wiz\unzopts.c"
+"C:\Wiz\updatelb.c"
+"C:\Wiz\winit.c"
+"C:\Wiz\wizmain.c"
+"C:\Wiz\wndproc.c"
+"C:\Wiz\zipopts.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE3.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE4.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib version.lib comctl32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Wiz.pdb" /machine:I386 /out:"Release/Wiz.exe" /libpath:"c:\projects\Wiz\release" 
+.\Release\about.obj
+.\Release\action.obj
+.\Release\cmds.obj
+.\Release\comment.obj
+.\Release\copyfile.obj
+.\Release\diff.obj
+.\Release\dispatch.obj
+.\Release\display.obj
+.\Release\filefind.obj
+.\Release\getdate.obj
+.\Release\getdir.obj
+.\Release\getfiles.obj
+.\Release\grep.obj
+.\Release\makezip.obj
+.\Release\mdichild.obj
+.\Release\misc.obj
+.\Release\password.obj
+.\Release\pattern.obj
+.\Release\property.obj
+.\Release\registry.obj
+.\Release\rename.obj
+.\Release\replace.obj
+.\Release\seldir.obj
+.\Release\service.obj
+.\Release\sizewndw.obj
+.\Release\sound.obj
+.\Release\splash.obj
+.\Release\statbar.obj
+.\Release\strings.obj
+.\Release\tabctrl.obj
+.\Release\toolbar.obj
+.\Release\unzopts.obj
+.\Release\updatelb.obj
+.\Release\winit.obj
+.\Release\wizmain.obj
+.\Release\wndproc.obj
+.\Release\zipopts.obj
+.\Release\wiz.res
+.\Unzip32\Release\Unzip32.lib
+.\Zip32\Release\Zip32.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE4.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+about.c
+action.c
+cmds.c
+comment.c
+copyfile.c
+diff.c
+dispatch.c
+display.c
+filefind.c
+getdate.c
+getdir.c
+getfiles.c
+grep.c
+makezip.c
+mdichild.c
+misc.c
+password.c
+pattern.c
+property.c
+registry.c
+rename.c
+replace.c
+seldir.c
+service.c
+sizewndw.c
+sound.c
+splash.c
+statbar.c
+strings.c
+tabctrl.c
+toolbar.c
+unzopts.c
+updatelb.c
+winit.c
+wizmain.c
+wndproc.c
+zipopts.c
+Linking...
+
+
+
+<h3>Results</h3>
+Wiz.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Unzip32 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE6.tmp" with contents
+[
+/nologo /MLd /W3 /GX /Z7 /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "WINDLL" /D "UNZIPLIB" /D "USE_EF_UT_TIME" /D "DLL" /D "REENTRANT" /D "LZW_CLEAN" /Fp"Debug/Unzip32.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Wiz\unzip\api.c"
+"C:\Wiz\unzip\crc32.c"
+"C:\Wiz\unzip\crctab.c"
+"C:\Wiz\unzip\crypt.c"
+"C:\Wiz\unzip\explode.c"
+"C:\Wiz\unzip\extract.c"
+"C:\Wiz\unzip\fileio.c"
+"C:\Wiz\unzip\globals.c"
+"C:\Wiz\unzip\inflate.c"
+"C:\Wiz\unzip\list.c"
+"C:\Wiz\unzip\match.c"
+"C:\Wiz\unzip\Win32\nt.c"
+"C:\Wiz\unzip\process.c"
+"C:\Wiz\unzip\unshrink.c"
+"C:\Wiz\unzip\Win32\win32.c"
+"C:\Wiz\unzip\windll\windll.c"
+"C:\Wiz\unzip\zipinfo.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE6.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE7.tmp" with contents
+[
+/nologo /out:"Debug\Unzip32.lib" 
+.\Debug\api.obj
+.\Debug\crc32.obj
+.\Debug\crctab.obj
+.\Debug\crypt.obj
+.\Debug\explode.obj
+.\Debug\extract.obj
+.\Debug\fileio.obj
+.\Debug\globals.obj
+.\Debug\inflate.obj
+.\Debug\list.obj
+.\Debug\match.obj
+.\Debug\nt.obj
+.\Debug\process.obj
+.\Debug\unshrink.obj
+.\Debug\win32.obj
+.\Debug\windll.obj
+.\Debug\zipinfo.obj
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE7.tmp"
+<h3>Output Window</h3>
+Compiling...
+api.c
+crc32.c
+crctab.c
+crypt.c
+explode.c
+extract.c
+fileio.c
+globals.c
+inflate.c
+list.c
+match.c
+nt.c
+process.c
+unshrink.c
+win32.c
+windll.c
+zipinfo.c
+Creating library...
+<h3>
+--------------------Configuration: Zip32 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/windll.res" /i "\Wiz\zip\windll" "C:\Wiz\zip\windll\windll.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE8.tmp" with contents
+[
+/nologo /MLd /W3 /GX /Z7 /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "USE_EF_UT_TIME" /D "NO_ASM" /D "ZIPLIB" /D "WINDLL" /D "API" /Fp"Debug/Zip32.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Wiz\zip\api.c"
+"C:\Wiz\zip\crc32.c"
+"C:\Wiz\zip\crctab.c"
+"C:\Wiz\zip\crypt.c"
+"C:\Wiz\zip\deflate.c"
+"C:\Wiz\zip\fileio.c"
+"C:\Wiz\zip\globals.c"
+"C:\Wiz\zip\Win32\nt.c"
+"C:\Wiz\zip\trees.c"
+"C:\Wiz\zip\util.c"
+"C:\Wiz\zip\Win32\win32.c"
+"C:\Wiz\zip\Win32\win32zip.c"
+"C:\Wiz\zip\windll\windll.c"
+"C:\Wiz\zip\zip.c"
+"C:\Wiz\zip\zipfile.c"
+"C:\Wiz\zip\zipup.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE8.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE9.tmp" with contents
+[
+/nologo /out:"Debug\Zip32.lib" 
+.\Debug\api.obj
+.\Debug\crc32.obj
+.\Debug\crctab.obj
+.\Debug\crypt.obj
+.\Debug\deflate.obj
+.\Debug\fileio.obj
+.\Debug\globals.obj
+.\Debug\nt.obj
+.\Debug\trees.obj
+.\Debug\util.obj
+.\Debug\win32.obj
+.\Debug\win32zip.obj
+.\Debug\windll.obj
+.\Debug\zip.obj
+.\Debug\zipfile.obj
+.\Debug\zipup.obj
+.\Debug\windll.res
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPE9.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+api.c
+crc32.c
+crctab.c
+crypt.c
+deflate.c
+fileio.c
+globals.c
+nt.c
+trees.c
+util.c
+win32.c
+win32zip.c
+windll.c
+zip.c
+zipfile.c
+zipup.c
+Creating library...
+<h3>
+--------------------Configuration: Wiz - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/wiz.res" /i "\Wiz" /d "_DEBUG" "C:\Wiz\wiz.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPEA.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "USE_UNZIP_LIB" /D "USE_ZIP_LIB" /D "API" /Fp"Debug/Wiz.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Wiz\about.c"
+"C:\Wiz\action.c"
+"C:\Wiz\cmds.c"
+"C:\Wiz\comment.c"
+"C:\Wiz\copyfile.c"
+"C:\Wiz\diff.c"
+"C:\Wiz\dispatch.c"
+"C:\Wiz\display.c"
+"C:\Wiz\filefind.c"
+"C:\Wiz\getdate.c"
+"C:\Wiz\getdir.c"
+"C:\Wiz\getfiles.c"
+"C:\Wiz\grep.c"
+"C:\Wiz\makezip.c"
+"C:\Wiz\mdichild.c"
+"C:\Wiz\misc.c"
+"C:\Wiz\password.c"
+"C:\Wiz\pattern.c"
+"C:\Wiz\property.c"
+"C:\Wiz\registry.c"
+"C:\Wiz\rename.c"
+"C:\Wiz\replace.c"
+"C:\Wiz\seldir.c"
+"C:\Wiz\service.c"
+"C:\Wiz\sizewndw.c"
+"C:\Wiz\sound.c"
+"C:\Wiz\splash.c"
+"C:\Wiz\statbar.c"
+"C:\Wiz\strings.c"
+"C:\Wiz\tabctrl.c"
+"C:\Wiz\toolbar.c"
+"C:\Wiz\unzopts.c"
+"C:\Wiz\updatelb.c"
+"C:\Wiz\winit.c"
+"C:\Wiz\wizmain.c"
+"C:\Wiz\wndproc.c"
+"C:\Wiz\zipopts.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPEA.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPEB.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib version.lib comctl32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Wiz.pdb" /debug /machine:I386 /out:"Debug/Wiz.exe" /pdbtype:sept /libpath:"c:\projects\Wiz\debug" 
+.\Debug\about.obj
+.\Debug\action.obj
+.\Debug\cmds.obj
+.\Debug\comment.obj
+.\Debug\copyfile.obj
+.\Debug\diff.obj
+.\Debug\dispatch.obj
+.\Debug\display.obj
+.\Debug\filefind.obj
+.\Debug\getdate.obj
+.\Debug\getdir.obj
+.\Debug\getfiles.obj
+.\Debug\grep.obj
+.\Debug\makezip.obj
+.\Debug\mdichild.obj
+.\Debug\misc.obj
+.\Debug\password.obj
+.\Debug\pattern.obj
+.\Debug\property.obj
+.\Debug\registry.obj
+.\Debug\rename.obj
+.\Debug\replace.obj
+.\Debug\seldir.obj
+.\Debug\service.obj
+.\Debug\sizewndw.obj
+.\Debug\sound.obj
+.\Debug\splash.obj
+.\Debug\statbar.obj
+.\Debug\strings.obj
+.\Debug\tabctrl.obj
+.\Debug\toolbar.obj
+.\Debug\unzopts.obj
+.\Debug\updatelb.obj
+.\Debug\winit.obj
+.\Debug\wizmain.obj
+.\Debug\wndproc.obj
+.\Debug\zipopts.obj
+.\Debug\wiz.res
+.\Unzip32\Debug\Unzip32.lib
+.\Zip32\Debug\Zip32.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPEB.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+about.c
+action.c
+cmds.c
+comment.c
+copyfile.c
+diff.c
+dispatch.c
+display.c
+filefind.c
+getdate.c
+getdir.c
+getfiles.c
+grep.c
+makezip.c
+mdichild.c
+misc.c
+password.c
+pattern.c
+property.c
+registry.c
+rename.c
+replace.c
+seldir.c
+service.c
+sizewndw.c
+sound.c
+splash.c
+statbar.c
+strings.c
+tabctrl.c
+toolbar.c
+unzopts.c
+updatelb.c
+winit.c
+wizmain.c
+wndproc.c
+zipopts.c
+Linking...
+
+
+
+<h3>Results</h3>
+Wiz.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: WizUtils - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/gutils.res" /i "\Wiz\WizDiff" /d "NDEBUG" "C:\Wiz\WizDiff\gutils.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPED.tmp" with contents
+[
+/nologo /MT /W3 /GX /O1 /I "c:\Wiz\WizDiff" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/WizUtils.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Wiz\Wizdiff\gbit.c"
+"C:\Wiz\Wizdiff\gdate.c"
+"C:\Wiz\Wizdiff\gmem.c"
+"C:\Wiz\Wizdiff\gutils.c"
+"C:\Wiz\Wizdiff\list.c"
+"C:\Wiz\Wizdiff\status.c"
+"C:\Wiz\Wizdiff\table.c"
+"C:\Wiz\Wizdiff\tpaint.c"
+"C:\Wiz\Wizdiff\tprint.c"
+"C:\Wiz\Wizdiff\tree.c"
+"C:\Wiz\Wizdiff\tscroll.c"
+"C:\Wiz\Wizdiff\utils.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPED.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPEE.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"..\..\Wiz_and_Static_Libraries\Release/WizUtils.pdb" /machine:I386 /def:"..\..\..\WizDiff\gutils.def" /out:"..\..\Wiz_and_Static_Libraries\Release/WizUtils.dll" /implib:"..\..\Wiz_and_Static_Libraries\Release/WizUtils.lib" 
+.\Release\gbit.obj
+.\Release\gdate.obj
+.\Release\gmem.obj
+.\Release\gutils.obj
+.\Release\list.obj
+.\Release\status.obj
+.\Release\table.obj
+.\Release\tpaint.obj
+.\Release\tprint.obj
+.\Release\tree.obj
+.\Release\tscroll.obj
+.\Release\utils.obj
+.\Release\gutils.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPEE.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+gbit.c
+gdate.c
+gmem.c
+gutils.c
+list.c
+status.c
+table.c
+tpaint.c
+tprint.c
+tree.c
+tscroll.c
+utils.c
+Linking...
+   Creating library ..\..\Wiz_and_Static_Libraries\Release/WizUtils.lib and object ..\..\Wiz_and_Static_Libraries\Release/WizUtils.exp
+<h3>
+--------------------Configuration: WizDiff - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/wizdiff.res" /i "\Wiz\WizDiff" /d "NDEBUG" "C:\Wiz\WizDiff\wizdiff.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPF2.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "c:\Wiz\Wizdiff" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/WizDiff.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Wiz\WizDiff\bar.c"
+"C:\Wiz\WizDiff\compitem.c"
+"C:\Wiz\WizDiff\complist.c"
+"C:\Wiz\WizDiff\file.c"
+"C:\Wiz\WizDiff\line.c"
+"C:\Wiz\WizDiff\scandir.c"
+"C:\Wiz\WizDiff\section.c"
+"C:\Wiz\WizDiff\view.c"
+"C:\Wiz\WizDiff\WIZDIFF.C"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPF2.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPF3.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib version.lib /nologo /subsystem:windows /incremental:no /pdb:"..\..\Wiz_and_Static_Libraries\Release/WizDiff.pdb" /machine:I386 /out:"..\..\Wiz_and_Static_Libraries\Release/WizDiff.exe" 
+.\Release\bar.obj
+.\Release\compitem.obj
+.\Release\complist.obj
+.\Release\file.obj
+.\Release\line.obj
+.\Release\scandir.obj
+.\Release\section.obj
+.\Release\view.obj
+.\Release\WIZDIFF.OBJ
+.\Release\wizdiff.res
+\Wiz\VisualC\Wiz_and_Static_Libraries\Release\WizUtils.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPF3.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+bar.c
+compitem.c
+complist.c
+file.c
+line.c
+scandir.c
+section.c
+view.c
+WIZDIFF.C
+Linking...
+
+
+
+<h3>Results</h3>
+WizDiff.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: WizUtils - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/gutils.res" /i "\Wiz\WizDiff" /d "_DEBUG" "C:\Wiz\WizDiff\gutils.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPF5.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "c:\Wiz\Wizdiff" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/WizUtils.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Wiz\Wizdiff\gbit.c"
+"C:\Wiz\Wizdiff\gdate.c"
+"C:\Wiz\Wizdiff\gmem.c"
+"C:\Wiz\Wizdiff\gutils.c"
+"C:\Wiz\Wizdiff\list.c"
+"C:\Wiz\Wizdiff\status.c"
+"C:\Wiz\Wizdiff\table.c"
+"C:\Wiz\Wizdiff\tpaint.c"
+"C:\Wiz\Wizdiff\tprint.c"
+"C:\Wiz\Wizdiff\tree.c"
+"C:\Wiz\Wizdiff\tscroll.c"
+"C:\Wiz\Wizdiff\utils.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPF5.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPF6.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"..\..\Wiz_and_Static_Libraries\Debug/WizUtils.pdb" /debug /machine:I386 /def:"..\..\..\WizDiff\gutils.def" /out:"..\..\Wiz_and_Static_Libraries\Debug/WizUtils.dll" /implib:"..\..\Wiz_and_Static_Libraries\Debug/WizUtils.lib" /pdbtype:sept 
+.\Debug\gbit.obj
+.\Debug\gdate.obj
+.\Debug\gmem.obj
+.\Debug\gutils.obj
+.\Debug\list.obj
+.\Debug\status.obj
+.\Debug\table.obj
+.\Debug\tpaint.obj
+.\Debug\tprint.obj
+.\Debug\tree.obj
+.\Debug\tscroll.obj
+.\Debug\utils.obj
+.\Debug\gutils.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPF6.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+gbit.c
+gdate.c
+gmem.c
+gutils.c
+list.c
+status.c
+table.c
+tpaint.c
+tprint.c
+tree.c
+tscroll.c
+utils.c
+Linking...
+   Creating library ..\..\Wiz_and_Static_Libraries\Debug/WizUtils.lib and object ..\..\Wiz_and_Static_Libraries\Debug/WizUtils.exp
+<h3>
+--------------------Configuration: WizDiff - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/wizdiff.res" /i "\Wiz\WizDiff" /d "_DEBUG" "C:\Wiz\WizDiff\wizdiff.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPFA.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "c:\Wiz\Wizdiff" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/WizDiff.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Wiz\WizDiff\bar.c"
+"C:\Wiz\WizDiff\compitem.c"
+"C:\Wiz\WizDiff\complist.c"
+"C:\Wiz\WizDiff\file.c"
+"C:\Wiz\WizDiff\line.c"
+"C:\Wiz\WizDiff\scandir.c"
+"C:\Wiz\WizDiff\section.c"
+"C:\Wiz\WizDiff\view.c"
+"C:\Wiz\WizDiff\WIZDIFF.C"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPFA.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPFB.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib version.lib /nologo /subsystem:windows /incremental:yes /pdb:"..\..\Wiz_and_Static_Libraries\Debug/WizDiff.pdb" /debug /machine:I386 /out:"..\..\Wiz_and_Static_Libraries\Debug/WizDiff.exe" /pdbtype:sept 
+.\Debug\bar.obj
+.\Debug\compitem.obj
+.\Debug\complist.obj
+.\Debug\file.obj
+.\Debug\line.obj
+.\Debug\scandir.obj
+.\Debug\section.obj
+.\Debug\view.obj
+.\Debug\WIZDIFF.OBJ
+.\Debug\wizdiff.res
+\Wiz\VisualC\Wiz_and_Static_Libraries\Debug\WizUtils.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPFB.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+bar.c
+compitem.c
+complist.c
+file.c
+line.c
+scandir.c
+section.c
+view.c
+WIZDIFF.C
+Linking...
+
+
+
+<h3>Results</h3>
+WizDiff.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: WizEdit - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/wizedit.res" /i "\Wiz\WizEdit" /d "NDEBUG" "C:\Wiz\WizEdit\wizedit.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPFD.tmp" with contents
+[
+/nologo /MT /W3 /GX /O1 /I "c:\Wiz\WizEdit" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/WizEdit.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Wiz\WizEdit\about.c"
+"C:\Wiz\WizEdit\dispatch.c"
+"C:\Wiz\WizEdit\dllmain.c"
+"C:\Wiz\WizEdit\file.c"
+"C:\Wiz\WizEdit\filedlg.c"
+"C:\Wiz\WizEdit\finddlg.c"
+"C:\Wiz\WizEdit\format.c"
+"C:\Wiz\WizEdit\init.c"
+"C:\Wiz\WizEdit\mdichild.c"
+"C:\Wiz\WizEdit\misc.c"
+"C:\Wiz\WizEdit\preview.c"
+"C:\Wiz\WizEdit\print.c"
+"C:\Wiz\WizEdit\printdlg.c"
+"C:\Wiz\WizEdit\rtf.c"
+"C:\Wiz\WizEdit\ruler.c"
+"C:\Wiz\WizEdit\search.c"
+"C:\Wiz\WizEdit\statbar.c"
+"C:\Wiz\WizEdit\toolbar.c"
+"C:\Wiz\WizEdit\WizEdit.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPFD.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPFE.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib version.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"..\..\Wiz_and_Static_Libraries\Release/WizEdit.pdb" /machine:I386 /def:"..\..\..\WizEdit\wizedit.def" /out:"..\..\Wiz_and_Static_Libraries\Release/WizEdit.dll" /implib:"..\..\Wiz_and_Static_Libraries\Release/WizEdit.lib" 
+.\Release\about.obj
+.\Release\dispatch.obj
+.\Release\dllmain.obj
+.\Release\file.obj
+.\Release\filedlg.obj
+.\Release\finddlg.obj
+.\Release\format.obj
+.\Release\init.obj
+.\Release\mdichild.obj
+.\Release\misc.obj
+.\Release\preview.obj
+.\Release\print.obj
+.\Release\printdlg.obj
+.\Release\rtf.obj
+.\Release\ruler.obj
+.\Release\search.obj
+.\Release\statbar.obj
+.\Release\toolbar.obj
+.\Release\WizEdit.obj
+.\Release\wizedit.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSPFE.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+about.c
+dispatch.c
+dllmain.c
+file.c
+filedlg.c
+finddlg.c
+format.c
+init.c
+mdichild.c
+misc.c
+preview.c
+print.c
+printdlg.c
+rtf.c
+ruler.c
+search.c
+statbar.c
+toolbar.c
+WizEdit.c
+Linking...
+   Creating library ..\..\Wiz_and_Static_Libraries\Release/WizEdit.lib and object ..\..\Wiz_and_Static_Libraries\Release/WizEdit.exp
+
+
+
+<h3>Results</h3>
+WizEdit.dll - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: WizEdit - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/wizedit.res" /i "\Wiz\WizEdit" /d "_DEBUG" "C:\Wiz\WizEdit\wizedit.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP102.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "c:\Wiz\WizEdit" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/WizEdit.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Wiz\WizEdit\about.c"
+"C:\Wiz\WizEdit\dispatch.c"
+"C:\Wiz\WizEdit\dllmain.c"
+"C:\Wiz\WizEdit\file.c"
+"C:\Wiz\WizEdit\filedlg.c"
+"C:\Wiz\WizEdit\finddlg.c"
+"C:\Wiz\WizEdit\format.c"
+"C:\Wiz\WizEdit\init.c"
+"C:\Wiz\WizEdit\mdichild.c"
+"C:\Wiz\WizEdit\misc.c"
+"C:\Wiz\WizEdit\preview.c"
+"C:\Wiz\WizEdit\print.c"
+"C:\Wiz\WizEdit\printdlg.c"
+"C:\Wiz\WizEdit\rtf.c"
+"C:\Wiz\WizEdit\ruler.c"
+"C:\Wiz\WizEdit\search.c"
+"C:\Wiz\WizEdit\statbar.c"
+"C:\Wiz\WizEdit\toolbar.c"
+"C:\Wiz\WizEdit\WizEdit.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP102.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP103.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib version.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"..\..\Wiz_and_Static_Libraries\Debug/WizEdit.pdb" /debug /machine:I386 /def:"..\..\..\WizEdit\wizedit.def" /out:"..\..\Wiz_and_Static_Libraries\Debug/WizEdit.dll" /implib:"..\..\Wiz_and_Static_Libraries\Debug/WizEdit.lib" /pdbtype:sept 
+.\Debug\about.obj
+.\Debug\dispatch.obj
+.\Debug\dllmain.obj
+.\Debug\file.obj
+.\Debug\filedlg.obj
+.\Debug\finddlg.obj
+.\Debug\format.obj
+.\Debug\init.obj
+.\Debug\mdichild.obj
+.\Debug\misc.obj
+.\Debug\preview.obj
+.\Debug\print.obj
+.\Debug\printdlg.obj
+.\Debug\rtf.obj
+.\Debug\ruler.obj
+.\Debug\search.obj
+.\Debug\statbar.obj
+.\Debug\toolbar.obj
+.\Debug\WizEdit.obj
+.\Debug\wizedit.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP103.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+about.c
+dispatch.c
+dllmain.c
+file.c
+filedlg.c
+finddlg.c
+format.c
+init.c
+mdichild.c
+misc.c
+preview.c
+print.c
+printdlg.c
+rtf.c
+ruler.c
+search.c
+statbar.c
+toolbar.c
+WizEdit.c
+Linking...
+   Creating library ..\..\Wiz_and_Static_Libraries\Debug/WizEdit.lib and object ..\..\Wiz_and_Static_Libraries\Debug/WizEdit.exp
+
+
+
+<h3>Results</h3>
+WizEdit.dll - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: WizEditor - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP107.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "c:\Wiz\Wizedit" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/WizEditor.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Wiz\WizEdit\winmain.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP107.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP108.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib version.lib /nologo /subsystem:windows /incremental:no /pdb:"..\..\Wiz_and_Static_Libraries\Release/WizEditor.pdb" /machine:I386 /out:"..\..\Wiz_and_Static_Libraries\Release/WizEditor.exe" 
+.\Release\winmain.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP108.tmp"
+<h3>Output Window</h3>
+Compiling...
+winmain.c
+Linking...
+
+
+
+<h3>Results</h3>
+WizEditor.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: WizEditor - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP10A.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "c:\Wiz\Wizedit" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/WizEditor.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Wiz\WizEdit\winmain.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP10A.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP10B.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib version.lib /nologo /subsystem:windows /incremental:yes /pdb:"..\..\Wiz_and_Static_Libraries\Debug/WizEditor.pdb" /debug /machine:I386 /out:"..\..\Wiz_and_Static_Libraries\Debug/WizEditor.exe" /pdbtype:sept 
+.\Debug\winmain.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP10B.tmp"
+<h3>Output Window</h3>
+Compiling...
+winmain.c
+Linking...
+
+
+
+<h3>Results</h3>
+WizEditor.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: UNZIPSFX - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/windll.res" /i "\Wiz\unzip\windll" /d "NDEBUG" "C:\Wiz\unzip\windll\windll.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP10D.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "c:\Wiz\unzip" /D "NDEBUG" /D "_MBCS" /D "_LIB" /D "API" /D "SFX" /D "USE_EF_UT_TIME" /D "REENTRANT" /D "WINDLL" /D "DLL" /D "USE_UNZIP_LIB" /D "ZIP64_SUPPORT" /D "WIN32" /D "LARGE_FILE_SUPPORT" /Fp"Release/UNZIPSFX.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Wiz\unzip\api.c"
+"C:\Wiz\unzip\crc32.c"
+"C:\Wiz\unzip\crctab.c"
+"C:\Wiz\unzip\crypt.c"
+"C:\Wiz\unzip\explode.c"
+"C:\Wiz\unzip\extract.c"
+"C:\Wiz\unzip\fileio.c"
+"C:\Wiz\unzip\globals.c"
+"C:\Wiz\unzip\inflate.c"
+"C:\Wiz\unzip\match.c"
+"C:\Wiz\unzip\Win32\nt.c"
+"C:\Wiz\unzip\process.c"
+"C:\Wiz\unzip\Win32\win32.c"
+"C:\Wiz\unzip\windll\windll.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP10D.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP10E.tmp" with contents
+[
+/nologo /out:"..\Release\UNZIPSFX.lib" 
+.\Release\api.obj
+.\Release\crc32.obj
+.\Release\crctab.obj
+.\Release\crypt.obj
+.\Release\explode.obj
+.\Release\extract.obj
+.\Release\fileio.obj
+.\Release\globals.obj
+.\Release\inflate.obj
+.\Release\match.obj
+.\Release\nt.obj
+.\Release\process.obj
+.\Release\win32.obj
+.\Release\windll.obj
+.\Release\windll.res
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP10E.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+api.c
+crc32.c
+crctab.c
+crypt.c
+explode.c
+extract.c
+fileio.c
+globals.c
+inflate.c
+match.c
+nt.c
+process.c
+win32.c
+windll.c
+Creating library...
+<h3>
+--------------------Configuration: WizSFX - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/sfxwiz.res" /i "\Wiz\unzip\windll\guisfx" /d "NDEBUG" "C:\Wiz\unzip\windll\guisfx\sfxwiz.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP10F.tmp" with contents
+[
+/nologo /ML /W3 /GX /O1 /I "c:\Wiz\unzip" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "DLL" /D "API" /D "USE_UNZIP_LIB" /Fp"Release/wizsfx.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Wiz\unzip\windll\guisfx\sfxwiz.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP10F.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP110.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib unzipsfx.lib /nologo /subsystem:windows /incremental:no /pdb:"..\..\Wiz_and_Static_Libraries\Release/wizsfx.pdb" /machine:I386 /out:"..\..\Wiz_and_Static_Libraries\Release/wizsfx.exe" /libpath:"Release" 
+.\Release\sfxwiz.obj
+.\Release\sfxwiz.res
+.\Release\UNZIPSFX.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP110.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+sfxwiz.c
+Linking...
+
+
+
+<h3>Results</h3>
+wizsfx.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: UNZIPSFX - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/windll.res" /i "\Wiz\unzip\windll" /d "_DEBUG" "C:\Wiz\unzip\windll\windll.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP112.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "c:\Wiz\unzip" /D "_DEBUG" /D "_MBCS" /D "_LIB" /D "API" /D "SFX" /D "USE_EF_UT_TIME" /D "REENTRANT" /D "WINDLL" /D "DLL" /D "USE_UNZIP_LIB" /D "ZIP64_SUPPORT" /D "WIN32" /D "LARGE_FILE_SUPPORT" /Fp"Debug/UNZIPSFX.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Wiz\unzip\api.c"
+"C:\Wiz\unzip\crc32.c"
+"C:\Wiz\unzip\crctab.c"
+"C:\Wiz\unzip\crypt.c"
+"C:\Wiz\unzip\explode.c"
+"C:\Wiz\unzip\extract.c"
+"C:\Wiz\unzip\fileio.c"
+"C:\Wiz\unzip\globals.c"
+"C:\Wiz\unzip\inflate.c"
+"C:\Wiz\unzip\match.c"
+"C:\Wiz\unzip\Win32\nt.c"
+"C:\Wiz\unzip\process.c"
+"C:\Wiz\unzip\Win32\win32.c"
+"C:\Wiz\unzip\windll\windll.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP112.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP113.tmp" with contents
+[
+/nologo /out:"..\Debug\UNZIPSFX.lib" 
+.\Debug\api.obj
+.\Debug\crc32.obj
+.\Debug\crctab.obj
+.\Debug\crypt.obj
+.\Debug\explode.obj
+.\Debug\extract.obj
+.\Debug\fileio.obj
+.\Debug\globals.obj
+.\Debug\inflate.obj
+.\Debug\match.obj
+.\Debug\nt.obj
+.\Debug\process.obj
+.\Debug\win32.obj
+.\Debug\windll.obj
+.\Debug\windll.res
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP113.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+api.c
+crc32.c
+crctab.c
+crypt.c
+explode.c
+extract.c
+fileio.c
+globals.c
+inflate.c
+match.c
+nt.c
+process.c
+win32.c
+windll.c
+Creating library...
+<h3>
+--------------------Configuration: WizSFX - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/sfxwiz.res" /i "\Wiz\unzip\windll\guisfx" /d "_DEBUG" "C:\Wiz\unzip\windll\guisfx\sfxwiz.rc"" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP114.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "c:\Wiz\unzip" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "DLL" /D "API" /D "USE_UNZIP_LIB" /Fp"Debug/wizsfx.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Wiz\unzip\windll\guisfx\sfxwiz.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP114.tmp" 
+Creating temporary file "C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP115.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib unzipsfx.lib /nologo /subsystem:windows /incremental:yes /pdb:"..\..\Wiz_and_Static_Libraries\Debug/wizsfx.pdb" /debug /machine:I386 /out:"..\..\Wiz_and_Static_Libraries\Debug/wizsfx.exe" /pdbtype:sept /libpath:"Debug" 
+.\Debug\sfxwiz.obj
+.\Debug\sfxwiz.res
+.\Debug\UNZIPSFX.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Mike\LOCALS~1\Temp\RSP115.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+sfxwiz.c
+Linking...
+
+
+
+<h3>Results</h3>
+wizsfx.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

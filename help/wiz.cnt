@@ -1,0 +1,16 @@
+:Base wiz.hlp
+1 Introduction
+2 What is Wiz=HELPID_WHAT_IS_WIZ
+2 Info-ZIP's License=HELPID_LICENSE
+2 Where=HELPID_WHERE
+1 Wiz Menus
+2 Wiz Main Menu=HELPID_MAIN_MENU
+2 File menu=HELPID_FILE_MENU
+2 Edit menu=HELPID_EDIT_MENU
+2 Archive menu=HELPID_ARCHIVE_MENU
+2 Search menu=HELPID_SEARCH_MENU
+2 Options menu=HELPID_OPTIONS_MENU
+2 Window menu=HELPID_WINDOW_MENU
+2 Help menu=HELPID_HELP_MENU
+1 Wiz Editor
+2 About the Wiz Editor=HELPID_EDITOR

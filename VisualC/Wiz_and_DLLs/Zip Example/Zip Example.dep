@@ -1,0 +1,13 @@
+# Microsoft Developer Studio Generated Dependency File, included by Zip Example.mak
+
+..\..\..\wiz\zip\windll\example.c : \
+	"..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"..\..\..\wiz\zip\api.h"\
+	"..\..\..\wiz\zip\tailor.h"\
+	"..\..\..\wiz\zip\win32\osdep.h"\
+	"..\..\..\wiz\zip\windll\example.h"\
+	"..\..\..\wiz\zip\windll\structs.h"\
+	"..\..\..\wiz\zip\windll\zipver.h"\
+	"..\..\..\wiz\zip\zip.h"\
+	"..\..\..\wiz\zip\ziperr.h"\
+	

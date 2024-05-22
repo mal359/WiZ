@@ -1,0 +1,12 @@
+;module-definition file for WizEdit DLL -- used by link.exe
+LIBRARY WIZEDIT ; Library module name
+
+DESCRIPTION 'WizEdit DLL 1.0 by Mike White 1999'
+
+EXPORTS
+     DllOnIdle       ; timer function
+     InitDll         ; initialize the dll, create editor
+     DllTranslate    ; processes all messages to dll
+     StreamBuffer    ; Read buffer into edit control
+     OpenCmdLineFile ; Open a file passed in from the command line
+
