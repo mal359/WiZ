@@ -1,9 +1,9 @@
 /*
-  Copyright (c) 1990-2005 Info-ZIP.  All rights reserved.
+  Copyright (c) 1990-2010 Info-ZIP.  All rights reserved.
 
-  See the accompanying file LICENSE, version 2004-May-22 or later
+  See the accompanying file LICENSE, version 2009-Jan-02 or later
   (the contents of which are also included in zip.h) for terms of use.
-  If, for some reason, both of these files are missing, the Info-ZIP license
+  If, for some reason, all these files are missing, the Info-ZIP license
   also may be found at:  ftp://ftp.info-zip.org/pub/infozip/license.html
 */
 /*
@@ -17,6 +17,18 @@
 #endif
 #define API
 
+/* Tell Microsoft Visual C++ 2005 to leave us alone and
+ * let us use standard C functions the way we're supposed to.
+ */
+#if defined(_MSC_VER) && (_MSC_VER >= 1400)
+#  ifndef _CRT_SECURE_NO_DEPRECATE
+#    define _CRT_SECURE_NO_DEPRECATE
+#  endif
+#  ifndef _CRT_NONSTDC_NO_DEPRECATE
+#    define _CRT_NONSTDC_NO_DEPRECATE
+#  endif
+#endif
+
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <time.h>
@@ -27,7 +39,11 @@
 #include <direct.h>
 #endif
 #include "example.h"
-#include "zipver.h"
+#include "../../revision.h"
+/* printf get redirected by a macro define in api.h !!! */
+#ifdef printf
+# undef printf
+#endif
 
 #ifdef WIN32
 #include <commctrl.h>
@@ -37,7 +53,7 @@
 #endif
 
 #ifdef WIN32
-#define ZIP_DLL_NAME "ZIP32.DLL\0"
+#define ZIP_DLL_NAME "ZIP32Z64.DLL\0"
 #else
 #define ZIP_DLL_NAME "ZIP16.DLL\0"
 #endif
@@ -66,7 +82,6 @@ HINSTANCE hZipDll;
 /* Forward References */
 _DLL_ZIP ZipArchive;
 _ZIP_USER_FUNCTIONS ZipInit;
-ZIPSETOPTIONS ZipSetOptions;
 
 void FreeUpMemory(void);
 int WINAPI DummyPassword(LPSTR, int, LPCSTR, LPCSTR);
@@ -104,7 +119,11 @@ OFSTRUCT ofs;
 HANDLE  hMem;         /* handle to mem alloc'ed */
 
 if (argc < 3)
+   {
+   printf("usage: %s [-options] <zipfile> [entry1 [entry2 [...]]] [-xi list]",
+          "example");
    return 0;           /* Exits if not proper number of arguments */
+   }
 
 hZUF = GlobalAlloc( GPTR, (DWORD)sizeof(ZIPUSERFUNCTIONS));
 if (!hZUF)
@@ -179,7 +198,7 @@ if (dwVerInfoSize)
               &cchVer);
    if (!fRet || !fRetName ||
       (lstrcmpi(lszVer, ZIP_DLL_VERSION) != 0) ||
-      (lstrcmpi(lszVerName, COMPANY_NAME) != 0))
+      (lstrcmpi(lszVerName, IZ_COMPANY_NAME) != 0))
       {
       wsprintf (str, DLL_VERSION_WARNING, ZIP_DLL_NAME);
       printf("%s\n", str);
@@ -209,8 +228,7 @@ if (hZipDll != NULL)
 #endif
    {
    (_DLL_ZIP)ZipArchive = (_DLL_ZIP)GetProcAddress(hZipDll, "ZpArchive");
-   (ZIPSETOPTIONS)ZipSetOptions = (ZIPSETOPTIONS)GetProcAddress(hZipDll, "ZpSetOptions");
-   if (!ZipArchive || !ZipSetOptions)
+   if (!ZipArchive)
       {
       char str[256];
       wsprintf (str, "Could not get entry point to %s", ZIP_DLL_NAME);
@@ -245,35 +263,54 @@ if (!(*ZipInit)(lpZipUserFunctions))
    }
 
 /* Here is where the action starts */
-ZpOpt.fSuffix = FALSE;        /* include suffixes (not yet implemented) */
-ZpOpt.fEncrypt = FALSE;       /* true if encryption wanted */
-ZpOpt.fSystem = FALSE;        /* true to include system/hidden files */
-ZpOpt.fVolume = FALSE;        /* true if storing volume label */
-ZpOpt.fExtra = FALSE;         /* true if including extra attributes */
-ZpOpt.fNoDirEntries = FALSE;  /* true if ignoring directory entries */
-ZpOpt.fVerbose = FALSE;       /* true if full messages wanted */
-ZpOpt.fQuiet = FALSE;         /* true if minimum messages wanted */
-ZpOpt.fCRLF_LF = FALSE;       /* true if translate CR/LF to LF */
-ZpOpt.fLF_CRLF = FALSE;       /* true if translate LF to CR/LF */
-ZpOpt.fJunkDir = FALSE;       /* true if junking directory names */
-ZpOpt.fGrow = FALSE;          /* true if allow appending to zip file */
-ZpOpt.fForce = FALSE;         /* true if making entries using DOS names */
-ZpOpt.fMove = FALSE;          /* true if deleting files added or updated */
-ZpOpt.fUpdate = FALSE;        /* true if updating zip file--overwrite only
-                                  if newer */
-ZpOpt.fFreshen = FALSE;       /* true if freshening zip file--overwrite only */
-ZpOpt.fJunkSFX = FALSE;       /* true if junking sfx prefix*/
-ZpOpt.fLatestTime = FALSE;    /* true if setting zip file time to time of
-                                  latest file in archive */
-ZpOpt.fComment = FALSE;       /* true if putting comment in zip file */
-ZpOpt.fOffsets = FALSE;       /* true if updating archive offsets for sfx
-                                  files */
-ZpOpt.fDeleteEntries = FALSE; /* true if deleting files from archive */
+memset(&ZpOpt, 0, sizeof(ZpOpt));
+ZpOpt.ExcludeBeforeDate = NULL;    /* set to valid Zip date, or NULL */
+ZpOpt.IncludeBeforeDate = NULL;    /* set to valid Zip date, or NULL */
+ZpOpt.szRootDir = szFullPath;      /* set to root dir (will cd to), or NULL */
+ZpOpt.szTempDir = NULL;            /* set to dir for temp files, or NULL */
+ZpOpt.fUnicode = 0;                /* Unicode flag */
+ZpOpt.fEncrypt = FALSE;            /* Encrytion flag */
+ZpOpt.fSystem = FALSE;             /* true to include system/hidden files */
+ZpOpt.fVolume = FALSE;             /* true if storing volume label */
+ZpOpt.fExtra = FALSE;              /* true if including extra attributes */
+ZpOpt.fNoDirEntries = FALSE;       /* true if ignoring directory entries */
+ZpOpt.fVerbose = FALSE;            /* true if full messages wanted */
+ZpOpt.fQuiet = FALSE;              /* true if minimum messages wanted */
+ZpOpt.fCRLF_LF = FALSE;            /* true if translate CR/LF to LF */
+ZpOpt.fLF_CRLF = FALSE;            /* true if translate LF to CR/LF */
+ZpOpt.fJunkDir = FALSE;            /* true if junking directory names */
+ZpOpt.fGrow = FALSE;               /* true if allow appending to zip file */
+ZpOpt.fForce = FALSE;              /* true if making entries using DOS names */
+ZpOpt.fMove = FALSE;               /* true if deleting files added or updated */
+ZpOpt.fDeleteEntries = FALSE;      /* true if deleting files from archive */
+ZpOpt.fUpdate = FALSE;             /* true if updating zip file--overwrite only
+                                        if newer */
+ZpOpt.fFreshen = FALSE;            /* true if freshening zip file--overwrite only */
+ZpOpt.fJunkSFX = FALSE;            /* true if junking sfx prefix*/
+ZpOpt.fLatestTime = FALSE;         /* true if setting zip file time to time of
+                                       latest file in archive */
+ZpOpt.fComment = FALSE;            /* true if putting comment in zip file */
+ZpOpt.fOffsets = FALSE;            /* true if updating archive offsets for sfx
+                                       files */
+ZpOpt.fPrivilege = 0;
+ZpOpt.fEncryption = 0;
+ZpOpt.szSplitSize = NULL;
+
+ZpOpt.szIncludeList = NULL;
+ZpOpt.IncludeListCount = 0;
+ZpOpt.IncludeList = NULL;
+ZpOpt.szExcludeList = NULL;
+ZpOpt.ExcludeListCount = 0;
+ZpOpt.ExcludeList = NULL;
+
 ZpOpt.fRecurse = 0;           /* subdir recursing mode: 1 = "-r", 2 = "-R" */
 ZpOpt.fRepair = 0;            /* archive repair mode: 1 = "-F", 2 = "-FF" */
-ZpOpt.Date = NULL;            /* Not using, set to NULL pointer */
+ZpOpt.fLevel = '6';           /* Default deflate compression level */
+ZpOpt.szCompMethod = NULL;
+for (i = 0; i < 8; i++) {
+  ZpOpt.fluff[i] = 0;
+}
 getcwd(szFullPath, PATH_MAX); /* Set directory to current directory */
-ZpOpt.szRootDir = szFullPath;
 
 ZpZCL.argc = argc - 2;        /* number of files to archive - adjust for the
                                   actual number of file names to be added */
@@ -300,11 +337,8 @@ for (i = 0; i < ZpZCL.argc; i++)
     }
 ZpZCL.FNV = (char **)szFileList;  /* list of files to archive */
 
-/* Set the options */
-ZipSetOptions(&ZpOpt);
-
 /* Go zip 'em up */
-retcode = ZipArchive(ZpZCL);
+retcode = ZipArchive(ZpZCL, &ZpOpt);
 if (retcode != 0)
    printf("Error in archiving\n");
 
@@ -335,11 +369,11 @@ else
    {
    if(GetVersion() < 0x80000000)
       {
-      (BOOL)dwPlatformId = TRUE;
+      dwPlatformId = TRUE;
       }
    else
       {
-      (BOOL)dwPlatformId = FALSE;
+      dwPlatformId = FALSE;
       }
     }
 return dwPlatformId;
